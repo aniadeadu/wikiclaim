@@ -1,0 +1,260 @@
+
+/* ===== Global styles ===== */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#root {
+  width: 100%;
+}
+
+/* ===== Main dashboard ===== */
+main {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 32px 40px 56px;
+}
+
+/* ===== Header ===== */
+main > h1 {
+  margin: 0;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #36c;
+  color: #202122;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+
+main > h1 + p {
+  margin: 10px 0 32px;
+  color: #54595d;
+  font-size: 15px;
+}
+
+/* ===== Section headings ===== */
+h2 {
+  margin: 0 0 10px;
+  color: #202122;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+main > p {
+  color: #54595d;
+}
+
+/* ===== Summary cards ===== */
+.overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0 36px;
+}
+
+.stat-card {
+  padding: 22px 24px;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+}
+
+.stat-card p {
+  margin: 0 0 6px;
+  color: #54595d;
+  font-size: 14px;
+}
+
+.stat-card h3 {
+  margin: 0;
+  color: #202122;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* ===== Claims section ===== */
+.table-container {
+  width: 100%;
+  margin-top: 18px;
+  overflow-x: auto;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+}
+
+/* ===== Filters and controls ===== */
+label {
+  display: inline-block;
+  margin: 12px 8px 12px 0;
+  color: #54595d;
+  font-size: 14px;
+}
+
+select {
+  max-width: 100%;
+  padding: 9px 34px 9px 12px;
+  border: 1px solid #a2a9b1;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #202122;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: #72777d;
+  color:#fff;
+  background-color: #36c;
+
+}
+
+select:focus-visible {
+  outline: 2px solid #36c;
+  outline-offset: 2px;
+}
+
+/* ===== Claims table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background: #f8f9fa;
+}
+
+th {
+  padding: 15px 18px;
+  border-bottom: 1px solid #a2a9b1;
+  color: #54595d;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #eaecf0;
+  color: #202122;
+  font-size: 14px;
+  line-height: 1.65;
+  vertical-align: top;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #f8f9fa;
+}
+
+td:first-child {
+  width: 50px;
+  color: #72777d;
+}
+
+td:nth-child(2) {
+  min-width: 260px;
+  max-width: 440px;
+}
+
+td:nth-child(3) {
+  min-width: 200px;
+  overflow-wrap: anywhere;
+}
+
+td:nth-child(4) {
+  min-width: 160px;
+}
+
+td:nth-child(5) {
+  min-width: 220px;
+}
+
+/* ===== Verdict dropdowns ===== */
+td select {
+  width: 100%;
+  min-width: 130px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* ===== Links ===== */
+/* ===== Links ===== */
+
+
+/* ===== Links ===== */
+
+/* ===== Links ===== */
+a,
+a:visited,
+.table-container a,
+td a {
+  color: #36c;
+  text-decoration: none;
+}
+
+a:hover,
+.table-container a:hover,
+td a:hover {
+  color: #2a4b8d;
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid #36c;
+  outline-offset: 2px;
+}
+
+
+
+/* ===== Responsive layout ===== */
+@media (max-width: 768px) {
+  main {
+    padding: 22px 16px 36px;
+  }
+
+  main > h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .overview {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 18px;
+  }
+
+  .table-container {
+    margin-top: 14px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+  }
+}
